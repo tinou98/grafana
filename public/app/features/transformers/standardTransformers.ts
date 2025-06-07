@@ -7,6 +7,7 @@ import { getConfigFromQueryTransformRegistryItem } from './configFromQuery/Confi
 import { getCalculateFieldTransformRegistryItem } from './editors/CalculateFieldTransformerEditor/CalculateFieldTransformerEditor';
 import { getConcatenateTransformRegistryItem } from './editors/ConcatenateTransformerEditor';
 import { getConvertFieldTypeTransformRegistryItem } from './editors/ConvertFieldTypeTransformerEditor';
+import { getFieldNameMappingRegistryItem } from './editors/FieldNameMappingEditor'
 import { getFilterFieldsByNameTransformRegistryItem } from './editors/FilterByNameTransformerEditor';
 import { getFilterFramesByRefIdTransformRegistryItem } from './editors/FilterByRefIdTransformerEditor';
 import { getFormatStringTransformerRegistryItem } from './editors/FormatStringTransformerEditor';
@@ -57,6 +58,7 @@ export const getStandardTransformers = (): TransformerRegistryItem[] => {
     getConfigFromQueryTransformRegistryItem(),
     getPrepareTimeseriesTransformerRegistryItem(),
     getConvertFieldTypeTransformRegistryItem(),
+    getFieldNameMappingRegistryItem(),
     getSpatialTransformRegistryItem(),
     getFieldLookupTransformRegistryItem(),
     getExtractFieldsTransformRegistryItem(),
