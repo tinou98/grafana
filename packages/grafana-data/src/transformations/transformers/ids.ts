@@ -29,6 +29,7 @@ export enum DataTransformerID {
   convertFieldType = 'convertFieldType',
   convertFrameType = 'convertFrameType',
   fieldLookup = 'fieldLookup',
+  fieldNameMapping = 'fieldNameMapping',
   heatmap = 'heatmap',
   spatial = 'spatial',
   joinByField = 'joinByField',

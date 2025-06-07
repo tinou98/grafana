@@ -3,6 +3,7 @@ import { concatenateTransformer } from './transformers/concat';
 import { convertFieldTypeTransformer } from './transformers/convertFieldType';
 import { convertFrameTypeTransformer } from './transformers/convertFrameType';
 import { ensureColumnsTransformer } from './transformers/ensureColumns';
+import { fieldNameMappingTransformer } from './transformers/fieldNameMapping';
 import { filterFieldsTransformer, filterFramesTransformer } from './transformers/filter';
 import { filterFieldsByNameTransformer } from './transformers/filterByName';
 import { filterFramesByRefIdTransformer } from './transformers/filterByRefId';
@@ -34,6 +35,7 @@ import { transposeTransformer } from './transformers/transpose';
  */
 export const standardTransformers = {
   noopTransformer,
+  fieldNameMappingTransformer,
   filterFieldsTransformer,
   filterFieldsByNameTransformer,
   filterFramesTransformer,

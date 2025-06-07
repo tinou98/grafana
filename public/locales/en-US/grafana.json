@@ -15755,6 +15755,11 @@
         "lookup-fields-from-resource": "Lookup fields from resource"
       }
     },
+    "field-name-mapping-transformer-editor": {
+      "label-field-to-replace": "Field to replace",
+      "label-mapping-query": "Mapping query",
+      "label-replace-with": "Replace with"
+    },
     "field-to-config-mapping-editor": {
       "additional-settings": "Additional settings",
       "field": "Field",
