@@ -106,7 +106,7 @@ func (ss *sqlStore) GetByUID(ctx context.Context, uid string) (*user.User, error
 	var usr user.User
 
 	err := ss.db.WithDbSession(ctx, func(sess *db.Session) error {
-		has, err := sess.Table("user").Where("uid = ?", uid).Get(&usr)
+		has, err := sess.Table(user.User{}).Where("uid = ?", uid).Get(&usr)
 		if err != nil {
 			return err
 		} else if !has {
@@ -121,7 +121,7 @@ func (ss *sqlStore) ListByIdOrUID(ctx context.Context, uids []string, ids []int6
 	users := make([]*user.User, 0)
 
 	err := ss.db.WithDbSession(ctx, func(sess *db.Session) error {
-		err := sess.Table("user").In("uid", uids).OrIn("id", ids).Find(&users)
+		err := sess.Table(user.User{}).In("uid", uids).OrIn("id", ids).Find(&users)
 		if err != nil {
 			return err
 		}
