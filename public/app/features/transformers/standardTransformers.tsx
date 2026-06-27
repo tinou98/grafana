@@ -169,6 +169,22 @@ export const getStandardTransformers = (): TransformerRegistryItem[] => {
       imageDark: filterFieldsByNameDark,
       imageLight: filterFieldsByNameLight,
     }),
+    makeRegistryItemFromTransformer(standardTransformers.fieldNameMappingTransformer, {
+      id: DataTransformerID.fieldNameMapping,
+      editor: lazy(() =>
+        import('./editors/FieldNameMappingEditor').then((m) => ({
+          default: m.FieldNameMappingTransformerEditor,
+        }))
+      ),
+      name: t('transformers.field-name-mapping-transformer-editor.name.field-name-mapping', 'Map fields name'),
+      description: t(
+        'transformers.field-name-mapping-transformer-editor.description.map-fields-name',
+        'Rename fields based on the result of another query.'
+      ),
+      categories: new Set([TransformerCategory.ReorderAndRename]),
+      imageDark: filterFieldsByNameDark,
+      imageLight: filterFieldsByNameLight,
+    }),
     makeRegistryItemFromTransformer(standardTransformers.renameByRegexTransformer, {
       id: DataTransformerID.renameByRegex,
       editor: lazy(() =>
